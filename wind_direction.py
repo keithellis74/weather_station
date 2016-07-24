@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 #
 # Modified by Keith Ellis to use the MCP3008 ADC via gpiozero
+# Based on the original code by Raspberry Pi Foundation
+# found here https://github.com/raspberrypi/weather-station
 #
 import json
 import time

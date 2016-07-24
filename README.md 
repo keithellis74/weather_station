@@ -1,11 +1,11 @@
-#Raspberry Pi Weather Station
+# Raspberry Pi Weather Station
 ----
 The code here will generally be a modification of the
 Raspberry Pi Foundation Weather Station Code, I am not using the
 official Raspberry Pi Weather Station hardware, so I will be
 modifying it to suit my own hardware
 
-##wind_direction.py
+## wind_direction.py
 First up is the wind vane, this uses a Maplin wind vane, more specifically,
 this [one](http://www.maplin.co.uk/p/maplin-replacement-wind-direction-sensor-for-n96fyn96gy-n81nf).
 

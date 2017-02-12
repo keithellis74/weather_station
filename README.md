@@ -5,6 +5,18 @@ Raspberry Pi Foundation Weather Station Code, I am not using the
 official Raspberry Pi Weather Station hardware, so I will be
 modifying it to suit my own hardware
 
+Depends
+* gpiozero
+    sudo pip3 install gpiozero
+
+* RPi.GPIO
+    sudo pip3 install RPi.GPIO
+
+* thingspeak
+    sudo pip3 install thingspeak
+
+
+
 ## wind_direction.py
 
 First up is the wind vane, this uses a Maplin wind vane, more specifically,

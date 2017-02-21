@@ -8,7 +8,7 @@ import thingspeak
 import config
 
 
-FREQUENCY = 60 * 1 #Record data to thingspeak at this frequency
+FREQUENCY = 60 * 5  #Record data to thingspeak at this frequency
 
 wind_dir = wind_direction.wind_direction(adc_channel = 7, config_file="wind_direction.json")
 interrupts = interrupt_client.interrupt_client(port = 49501)
@@ -37,12 +37,13 @@ def publish(channel):
 if __name__ == "__main__":
 
 	channel = thingspeak.Channel(id=config.channel_id,
-				write_key=config.write_key)
+				write_key=config.write_key,
+				timeout=(3.5,90))
 	while True:
 		'''
 		Send channels to thingspeak
 		'''
-		wind_average = wind_dir.get_value(1) #ten seconds
+		wind_average = wind_dir.get_value(10) #ten seconds
 		publish(channel)
 	
 		print("Wind direction = {0} Wind speed = {1} Wind gust = {2} Rain Fall = {3}".format(wind_average,
